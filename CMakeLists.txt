@@ -8,4 +8,7 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(include)
 aux_source_directory(./lib src)
 
+# define REPEAT_COUNT 1
+add_compile_definitions(REPEAT_COUNT=1)
+
 add_executable(serial main.cpp ${src})

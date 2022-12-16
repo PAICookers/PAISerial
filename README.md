@@ -6,7 +6,7 @@
 mkdir build
 cd build
 cmake ..
-make
+make -j16
 ```
 
 生成的可执行文件位于 `./build/serial` ，通过指定参数可配置串口名、波特率，`example.sh` 提供了实用脚本。

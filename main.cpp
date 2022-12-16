@@ -136,7 +136,7 @@ void *serial_write(void *args) {
     int count;
     int rc;
 
-    for (count = 0; count < 3; count++)
+    for (count = 0; count < REPEAT_COUNT; count++)
     {
         sem_wait(&ok_to_send);
         printf("Start sending #%d...\n", count+1);
@@ -166,7 +166,7 @@ void *serial_read(void *args) {
     static int ret = 0;
     uint8_t rc[CMD_LENGTH];
 
-    for (count = 0; count < 3; count++) {
+    for (count = 0; count < REPEAT_COUNT; count++) {
         for (i = 0; i < CMD_LENGTH; i++) {
             rc[i] = 0;
         }
